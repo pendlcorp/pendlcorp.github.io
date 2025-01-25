@@ -1,0 +1,42 @@
+name: Deploy SitePress to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Ruby
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1 # Specify your Ruby version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      # Step 4: Build the SitePress site
+      - name: Build SitePress site
+        run: |
+          bundle exec sitepress compile
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output # Replace "output" with your build directory if different
