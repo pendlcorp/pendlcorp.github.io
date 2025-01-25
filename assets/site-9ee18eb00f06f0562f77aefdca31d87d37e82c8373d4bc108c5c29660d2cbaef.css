@@ -1,0 +1,51 @@
+/* line 1, assets/stylesheets/site.css.scss */
+body {
+  font-family: "Lexend Giga", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* line 16, assets/stylesheets/site.css.scss */
+main {
+  text-align: center;
+}
+
+/* line 20, assets/stylesheets/site.css.scss */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* line 25, assets/stylesheets/site.css.scss */
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* line 30, assets/stylesheets/site.css.scss */
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* line 36, assets/stylesheets/site.css.scss */
+footer a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* line 41, assets/stylesheets/site.css.scss */
+img {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 15px 0px;
+  border-radius: 10px;
+}
